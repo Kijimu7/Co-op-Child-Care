@@ -1,0 +1,100 @@
+/* Show it is fixed to the top */
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+ 
+  }
+
+   /* header */ 
+  header .nav-login a{
+          cursor: pointer;
+           color: #FFF;
+      
+   }
+  button.navbar-toggler:hover{
+    background-color: #5f5959
+  }
+
+  /* registration-form */
+    /* signup-form */
+.signup-form{
+      width: 400px;
+      margin: 0 auto;
+      padding-top: 30px;
+      
+}
+
+.input-sp input[type=number]{
+  width: 30%;
+ 
+  
+ 
+}
+.signup-form input{
+  width: 90%;
+  height: 40px;
+  padding: 0px 5%;
+  margin-bottom: 4px;
+  background: #fff;
+
+}
+
+
+
+/* buttons style */
+.signup-form button{
+  background: rgb(205, 240, 10);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+}
+.Signup{
+padding-top: 200px;  
+}
+
+/* signin.css */
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/* upload picture */
+div.upload-file{
+   padding: 100px;
+    background: black;
+}
+
