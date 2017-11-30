@@ -1,9 +1,12 @@
-/* Show it is fixed to the top */
 body {
-    min-height: 75rem;
-    padding-top: 4.5rem;
- 
-  }
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  margin: 100px;
+}
+/* Home page */
+.container-main{
+  padding: 300px;
+}
 
    /* header */ 
   header .nav-login a{
@@ -43,7 +46,7 @@ body {
 
 /* buttons style */
 .signup-form button{
-  background: rgb(205, 240, 10);
+  background: rgb(79, 10, 240);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -52,7 +55,8 @@ body {
   width: 90%;
 }
 .Signup{
-padding-top: 200px;  
+padding-top: 200px; 
+
 }
 
 /* signin.css */
@@ -96,5 +100,20 @@ padding-top: 200px;
 div.upload-file{
    padding: 100px;
     background: black;
+}
+
+/* signin */
+
+div.login{
+
+  padding: 300px;
+  height: 100px;
+display: block;
+
+}
+
+  
+div.test{
+ color:pink;
 }
 
