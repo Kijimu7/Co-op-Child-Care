@@ -1,29 +1,31 @@
 <?php
-session_start();
+
+// if sumbit button pressed
 if (isset($_POST['submit'])){
-    echo "Hello";
-    include 'dbh-inc.php';
+  
+    include_once 'dbh-inc.php';
 
     //taking into account the current character set of the connection 
     //so that it is safe to place it in a mysql_query().
-    
-$comments = mysqli_real_escape_string($conn, $_POST['user_comments']);
+  
+
+  $comments = mysqli_real_escape_string($conn, $_POST['text']);
+ 
 
 
-}
 
-/*if (empty($comments)) {
-    header("Location: index.php?");
+if (empty($comments)) {
+        header("Location: index.php?comment=empty");
+        echo "please write comments";
     exit();
 }
 else{
-$sql = "SELECT * FROM users WHERE user_comments='$comments'";
-$result = mysqli_query($conn, $sql);
 
-echo $_SESSION['u_last'];
+$sql = "INSERT INTO user_comments (comment) VALUE ('$comments')";
+mysqli_query($conn, $sql);
 
-header('Loation: index.php');
+
+header("Location: index.php?comment=success");
 exit(); 
 }
 }
-*/

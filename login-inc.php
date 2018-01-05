@@ -6,11 +6,12 @@ if (isset($_POST['submit'])){
 
     $uid = mysqli_real_escape_string($conn, $_POST['uid']);
     $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+  
 
      //Error handlers
      //Check if inputs are empty
      if (empty($uid) || empty($pwd)){
-        header("Location: index.php?login=empty");
+        header("Location: signin.php?login=empty");
         exit();
      
 }else{
@@ -21,7 +22,7 @@ if (isset($_POST['submit'])){
     $resultCheck = mysqli_num_rows($result);
     //no result inside
     if ($resultCheck < 1){
-        header("Location: index.php?login=error1");
+        header("Location: signin.php?login=error1");
         exit();
     }else{
 
@@ -30,13 +31,18 @@ if (isset($_POST['submit'])){
             //De-hashing the password
             $hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
             if ($hashedPwdCheck == false){
-                header("Location: index.php?login=error2");
+                header("Location: signin.php?login=error2");
                 exit();
             }elseif($hashedPwdCheck == true){
 
                 //Log in the user here
                 //Set session variables
                 // Assosiateive array
+                /*A session creates a file in a temporary directory 
+                on the server where registered session variables 
+                and their values are stored. This data will be available to
+                all pages on the site during that visit.*/
+
                 $_SESSION['u_id'] = $row['user_id'];
                 $_SESSION['u_first'] = $row['user_first'];
                 $_SESSION['u_last'] = $row['user_last'];
@@ -49,7 +55,7 @@ if (isset($_POST['submit'])){
               
                 
 
-                header("Location: index.php?login=success");
+                header("Location: signin.php?login=success");
                 exit();
             
             }
@@ -59,6 +65,6 @@ if (isset($_POST['submit'])){
 }
 
 }else{
-     header("Location: index.php?login=error3");
+     header("Location: signin.php?login=error3");
      exit();
  }

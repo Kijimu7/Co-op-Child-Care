@@ -37,7 +37,16 @@
                          </ul>
           <div class="nav-login">              
             <a class="login" href="signin.php">
-            Login
+            <?php         
+            if (isset($_SESSION['u_id'])){     
+        echo $_SESSION['u_first'];
+        echo $_SESSION['u_last'];
+                          }
+                          else{
+                            echo "login";
+                          }
+          
+?>    
             </a>
             <a class="Signup" href="registration-form.php">
               Sign up
@@ -61,9 +70,9 @@
             }
          
           ?>
-          <i class="fa fa-plus" aria-hidden="true"></i>
+          <a href="profile-page.php"><i class="fa fa-plus" aria-hidden="true"></i>
           
-            New post
+            New post</a>
             
         </div>
 

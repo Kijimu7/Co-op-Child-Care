@@ -23,8 +23,8 @@ if (isset($_SESSION['u_id'])){
 
 }
 ?>
-<form action="usercomments.php" name="user_comments" method="POST">
+<form action="usercomments.php" name="text" method="POST">
 <textarea rows="4" cols="50"></textarea>
 <br>
-<input type="submit" >
+<input type="submit" name="submit" >
 </form>

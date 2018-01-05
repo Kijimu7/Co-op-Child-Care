@@ -4,8 +4,9 @@ body {
   margin: 100px;
 }
 /* Home page */
-.container-main{
-  padding: 300px;
+div.container-main{
+  padding: 100px;
+  color: blue;
 }
 
    /* header */ 

@@ -1,5 +1,6 @@
 <?php
 
+
 if(isset($_POST['submit'])){
 
 include_once 'dbh-inc.php';
@@ -13,11 +14,7 @@ include_once 'dbh-inc.php';
     $uid = mysqli_real_escape_string($conn, $_POST['uid']);
     $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
     $kid = mysqli_real_escape_string($conn, $_POST['kid']);
-   
-    
     $cpr = mysqli_real_escape_string($conn, $_POST['cpr']);
-    
-     
    $file = mysqli_real_escape_string($conn, $_FILES["filetoupload"]["name"]);
         
 
