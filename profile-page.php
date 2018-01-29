@@ -19,12 +19,13 @@ if (isset($_SESSION['u_id'])){
       echo "url: " . $url;
       echo "<img src=" .$url . " width=100px>";
 
-      
-
-}
+      }
 ?>
-<form action="usercomments.php" name="text" method="POST">
-<textarea rows="4" cols="50"></textarea>
+<div class="discription">
+<form action="post.php"  method="POST">
+ Title     <input type="text" name="title">      
+Comment     <textarea name="description" rows="4" cols="50"></textarea>
 <br>
 <input type="submit" name="submit" >
 </form>
+</div>

@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+    <title>Co-op Child Care</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <a class="navbar-brand" href="index.php">Pay it forward</a>
+          <a class="navbar-brand" href="index.php">Co-op Child Care</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -61,20 +61,35 @@
         </nav>
       </header>
       
-        <div class="container-main">
-          <?php
-            if (isset($_SESSION['u_id'])){
-              echo "You are logged in";
-              
-             
-            }
-         
-          ?>
-          <a href="profile-page.php"><i class="fa fa-plus" aria-hidden="true"></i>
+        <div class="wrapper">
+  
+
+     
+
+
+        
+        
+          <a href="profile-page.php" class="Newpost"><i class="fa fa-plus" aria-hidden="true"></i>
           
             New post</a>
-            
         </div>
+        <?php
+               
+    include_once 'dbh-inc.php';
+    $sql = "SELECT comment, title FROM user_post";
+    $result = mysqli_query ($conn, $sql);
+    while ($row = mysqli_fetch_array($result)) {
+      echo "<div class = 'post-page'>";
+      echo "<p>" .$row['comment']."</p>";
+      echo "<p>" .$row['title']."</p>";
+      echo '<form>
+      <input type="submit" value="Submit">
+      <input type="submit" value="question">
+      </form>';
+      echo "</div>";
+    }
+    ?>
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

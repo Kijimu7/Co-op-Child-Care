@@ -10,7 +10,7 @@ include_once 'header.php';
    
 if (isset($_SESSION['u_id'])){     
             
-  
+      echo '<div class="userpage">';
       echo "Name:  " . $_SESSION['u_first'];
       echo $_SESSION['u_last'];
       echo "<br>";
@@ -29,6 +29,7 @@ if (isset($_SESSION['u_id'])){
     echo '<form action="logout-inc.php" method="POST">
             <button type="submit" name="submit">Logout</button>
       </form>';
+      echo'</div>';
       } else{
         echo '<form action="login-inc.php" method="POST">
         <input type="text" name="uid" placeholder="Username/e-mail">

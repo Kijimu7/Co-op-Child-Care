@@ -4,7 +4,7 @@ body {
   margin: 100px;
 }
 /* Home page */
-div.container-main{
+div.wrapper{
   padding: 100px;
   color: blue;
 }
@@ -19,6 +19,40 @@ div.container-main{
     background-color: #5f5959
   }
 
+ /* post-page */
+ div.post-page{
+  width: 350px;
+  height: 400px;
+  display: block;
+  margin: 50px;
+  padding: 30px;
+    color: rgb(15, 14, 14);
+  font-size: 30px;
+  border: 1px solid rgb(197, 197, 197);
+  background: white;
+  box-shadow: 1px 1px 2px grey;
+
+ } 
+ .Newpost{
+   color: black;
+ }
+a:visited{
+  color: rgb(101, 23, 245);
+ } 
+
+ .discription{
+  width: 500px;
+  height: 300px;
+    border: rgb(199, 194, 194) solid 1px;
+    background: rgb(252, 249, 249);
+    box-shadow: 1px 1px 2px grey;
+    clear: both;
+    padding: 3%;
+ }
+ .discription input{
+   width: 90%;
+   clear:both;
+ }
   /* registration-form */
     /* signup-form */
 .signup-form{
@@ -39,10 +73,19 @@ div.container-main{
   height: 40px;
   padding: 0px 5%;
   margin-bottom: 4px;
-  background: #fff;
+  background: rgb(230, 224, 224);
 
 }
 
+/*signin-page */
+.userpage{
+  width: 500px;
+  height: 300px;
+  margin-top: 10px;
+  padding: 50px;
+  box-shadow: 1px 1px 2px grey;
+  background-color: rgb(247, 249, 252);
+}
 
 
 /* buttons style */
